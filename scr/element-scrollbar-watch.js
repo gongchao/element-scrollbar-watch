@@ -1,10 +1,11 @@
 
 ;(function (window, document, undefined) {
 
-    let element = document.querySelectorAll('[data-scroll]');
+    let element = document.querySelectorAll('[data-scroll="true"]');
 
     window.onscroll = () => {
         for (let i = 0; i < element.length; i++) {
+            let event = element[i].getAttribute('data-scroll');
 
             /**
              * enter
